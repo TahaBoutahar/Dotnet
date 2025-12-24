@@ -1,0 +1,1 @@
+getVehicles().then(vs=>{const a=vs.filter(v=>v.status==='Available').length;const r=vs.filter(v=>v.status==='Rented').length;new Chart(document.getElementById('vehiclesChart'),{type:'bar',data:{labels:['Available','Rented'],datasets:[{data:[a,r]}]}});});

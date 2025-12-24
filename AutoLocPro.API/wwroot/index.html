@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoLocPro</title>
+</head>
+<body>
+
+    <h1>Vehicles</h1>
+
+    <ul id="list"></ul>
+
+    <script type="module">
+        import { getVehicles } from "./js/api.js";
+
+        const list = document.getElementById("list");
+
+        getVehicles().then(vehicles => {
+            vehicles.forEach(v => {
+                const li = document.createElement("li");
+                li.textContent = `${v.brand} ${v.model}`;
+                list.appendChild(li);
+            });
+        });
+    </script>
+
+</body>
+</html>

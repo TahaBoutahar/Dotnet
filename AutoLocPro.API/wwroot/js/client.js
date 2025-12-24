@@ -1,0 +1,1 @@
+getVehicles().then(vs=>{const c=document.getElementById('cars');vs.forEach(v=>{c.innerHTML+=`<div class='card'><h3>${v.brand} ${v.model}</h3></div>`})})
